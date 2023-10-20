@@ -31,7 +31,7 @@ export default async function page({ params }) {
         />
       </div>
       <div className="min-h-screen flex items-center mx-7">
-        <div className="relative text-white bg-blue-500 w-[1300px] h-[500px] mx-auto">
+        <div className="relative text-white bg-blue-500 w-[1300px] h-[500px] mx-auto a">
           <div className="flex h-48 bg-red-500 w-full justify-between">
             <div className="flex gap-5 ml-5">
               <div className="text-8xl">{Math.trunc(data.main.temp)}</div>
