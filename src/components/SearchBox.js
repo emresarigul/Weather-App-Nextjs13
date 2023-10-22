@@ -15,7 +15,10 @@ export default function SearchBox() {
     <div>
       <form onSubmit={citySearch} className="flex flex-col">
         <input
-          onChange={(e) => setCityName(e.target.value)}
+          onChange={(e) => {
+            const fixedCityName = e.target.value.replace(/ã/g, "a");
+            setCityName(fixedCityName);
+          }}
           className="w-40 border border-gray-500 rounded-full outline-none"
           type="text"
         />
