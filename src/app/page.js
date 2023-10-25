@@ -1,15 +1,19 @@
 import SearchBox from "@/components/SearchBox";
-
 import Image from "next/image";
+import searchBgImage from "@/images/search-bg-2.jpg";
 
 export default function Home() {
-  //https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
-
-  //console.log(data.main.temp);
-
   return (
-    <div className="">
-      <SearchBox />
+    <div className="mx-5">
+      <Image
+        src={searchBgImage}
+        fill={true}
+        alt="nature"
+        className="object-cover brightness-[0.65]"
+      />
+      <div className="relative">
+        <SearchBox />
+      </div>
     </div>
   );
 }
