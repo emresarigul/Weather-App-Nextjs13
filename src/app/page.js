@@ -8,7 +8,7 @@ export default function Home() {
   //console.log(data.main.temp);
 
   return (
-    <div>
+    <div className="">
       <SearchBox />
     </div>
   );

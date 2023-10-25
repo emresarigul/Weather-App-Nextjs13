@@ -31,6 +31,8 @@ export default async function page({ params }) {
   }
   const photoData = await photoRes.json();
 
+  // console.log(photoData);
+
   return (
     <div>
       <div>
@@ -39,7 +41,7 @@ export default async function page({ params }) {
           src={photoData.photos[0].src.small}
           alt="bg"
           fill={true}
-          quality={100}
+          quality={50}
         />
       </div>
       <WeatherResult data={data} photoData={photoData} />

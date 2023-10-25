@@ -12,15 +12,16 @@ export default function SearchBox() {
     router.push(`/weather-result/${cityName}`);
   };
   return (
-    <div>
-      <form onSubmit={citySearch} className="flex flex-col">
+    <div className="max-w-3xl mx-auto min-h-screen flex items-center">
+      <form onSubmit={citySearch} className="flex flex-col w-full">
         <input
           onChange={(e) => {
             const fixedCityName = e.target.value.replace(/ã/g, "a");
             setCityName(fixedCityName);
           }}
-          className="w-40 border border-gray-500 rounded-full outline-none"
+          className="border border-gray-500 rounded-lg outline-none h-14 placeholder:text-xl placeholder:pl-5"
           type="text"
+          placeholder="Search a city"
         />
         <button type="submit" className="flex">
           Searcsssh
