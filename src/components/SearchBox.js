@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { AiOutlineSearch } from "react-icons/ai";
 
-export default function SearchBox() {
+export default function SearchBox({ pageParam, pageInput }) {
   const [cityName, setCityName] = useState("");
   const router = useRouter();
 
@@ -14,7 +14,7 @@ export default function SearchBox() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto min-h-screen flex items-center">
+    <div className={pageParam}>
       <form onSubmit={citySearch} className="flex flex-col w-full relative">
         <input
           onChange={(e) => {

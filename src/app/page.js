@@ -12,7 +12,7 @@ export default function Home() {
         className="object-cover brightness-[0.65]"
       />
       <div className="relative">
-        <SearchBox />
+        <SearchBox pageParam="search-main-page" />
       </div>
     </div>
   );

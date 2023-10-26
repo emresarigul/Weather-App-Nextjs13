@@ -1,3 +1,4 @@
+import SearchBox from "@/components/SearchBox";
 import WeatherResult from "@/components/WeatherResult";
 import Image from "next/image";
 import React from "react";
@@ -31,6 +32,7 @@ export default async function page({ params }) {
 
   return (
     <div className="relative overflow-hidden">
+      <SearchBox pageParam="search-result-page" />
       <div
         style={{
           backgroundImage: `url(${photoData.photos[0].src.small})`,
