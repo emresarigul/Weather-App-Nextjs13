@@ -33,7 +33,7 @@ export default async function page({ params }) {
     <div>
       <div>
         <Image
-          className="object-cover blur-lg scale-110"
+          className="object-cover blur sm:blur-lg scale-100 lg:scale-110"
           src={photoData.photos[0].src.small}
           alt="bg"
           fill={true}
