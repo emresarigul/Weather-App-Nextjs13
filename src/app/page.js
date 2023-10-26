@@ -4,7 +4,7 @@ import searchBgImage from "@/images/search-bg-2.jpg";
 
 export default function Home() {
   return (
-    <div className="mx-5 overflow-hidden">
+    <div className="mx-5 overflow-hidden min-h-screen">
       <Image
         src={searchBgImage}
         fill={true}
