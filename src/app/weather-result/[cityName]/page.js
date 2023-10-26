@@ -30,16 +30,18 @@ export default async function page({ params }) {
   const photoData = await photoRes.json();
 
   return (
-    <div>
-      <div>
-        <Image
-          className="object-cover blur sm:blur-lg scale-100 lg:scale-110"
-          src={photoData.photos[0].src.small}
-          alt="bg"
-          fill={true}
-          quality={50}
-        />
-      </div>
+    <div className="relative overflow-hidden">
+      <div
+        style={{
+          backgroundImage: `url(${photoData.photos[0].src.small})`,
+          filter: "blur(12px)",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: "100vh",
+          transform: "scale(1.1)",
+        }}
+      ></div>
       <WeatherResult data={data} photoData={photoData} />
     </div>
   );
