@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { AiOutlineSearch } from "react-icons/ai";
 
-export default function SearchBox({ pageParam, pageInput }) {
+export default function SearchBox({ pageParam }) {
   const [cityName, setCityName] = useState("");
   const router = useRouter();
 

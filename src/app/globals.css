@@ -4,7 +4,7 @@
 
 @layer components {
   .search-main-page {
-    @apply max-w-3xl mx-auto min-h-screen flex items-center;
+    @apply absolute top-1/2 w-full md:w-[48rem] px-5 left-1/2 -translate-x-2/4;
   }
   .search-result-page {
     @apply absolute left-1/2 -translate-x-2/4 z-50 w-full px-5 md:w-1/2 lg:w-[48rem] top-4;
