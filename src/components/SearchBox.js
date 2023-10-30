@@ -19,7 +19,7 @@ export default function SearchBox({ pageParam }) {
         <input
           onChange={(e) => {
             const fixedCityName = e.target.value.replace(/ã/g, "a");
-            setCityName(fixedCityName);
+            setCityName(fixedCityName.trim());
           }}
           className="border-2 border-white rounded-lg outline-none h-14 lg:placeholder:text-xl placeholder:text-white bg-transparent px-5 text-white"
           type="text"
