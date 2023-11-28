@@ -8,6 +8,7 @@ const nextConfig = {
       "cdn-icons-png.flaticon.com",
       "www.pexels.com",
     ],
+    unoptimized: true,
   },
 };
 
