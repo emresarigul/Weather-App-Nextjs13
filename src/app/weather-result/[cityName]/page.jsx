@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 
 export default async function page({ params }) {
-  const url = ` http://api.weatherapi.com/v1/forecast.json?key=${process.env.NEXT_PUBLIC_WEATHER_KEY}&q=${params.cityName}&days=3&aqi=no&alerts=no`;
+  const url = ` http://api.weatherapi.com/v1/forecast.json?key=${process.env.WEATHER_KEY}&q=${params.cityName}&days=3&aqi=no&alerts=no`;
 
   // weather fetch
   const res = await fetch(url, { cache: "no-cache" });
@@ -21,7 +21,7 @@ export default async function page({ params }) {
 
   const options = {
     method: "GET",
-    headers: { Authorization: `${process.env.NEXT_PUBLIC_PHOTO_KEY}` },
+    headers: { Authorization: `${process.env.PHOTO_KEY}` },
   };
 
   const photoRes = await fetch(photoUrl, options);
