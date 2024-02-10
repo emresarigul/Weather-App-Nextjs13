@@ -9,7 +9,7 @@ export default function SearchBox({ pageParam }) {
 
   const citySearch = (e) => {
     e.preventDefault();
-    if (cityName.trim() === "") {
+    if (!cityName) {
       return;
     }
     router.push(`/weather-result/${cityName.trim()}`);
@@ -19,20 +19,14 @@ export default function SearchBox({ pageParam }) {
     <div className={pageParam}>
       <form onSubmit={citySearch} className="flex flex-col w-full relative">
         <input
-          onKeyDown={(e) => {
-            if (e.key === " " && cityName.trim() === "") {
-              e.preventDefault();
-            }
-          }}
           onChange={(e) => {
             const inputText = e.target.value;
             const fixedCityName = inputText.replace(/ã/g, "a");
-            setCityName(fixedCityName);
+            setCityName(fixedCityName.trim());
           }}
           className="border-2 border-white rounded-lg outline-none h-14 lg:placeholder:text-xl placeholder:text-white bg-transparent px-5 text-white"
           type="text"
           placeholder="Search a city"
-          value={cityName}
         />
         <AiOutlineSearch
           className="text-2xl lg:text-3xl text-white absolute right-5 top-4 lg:top-3 cursor-pointer"
