@@ -15,8 +15,6 @@ export default function SearchBox({ pageParam }) {
     router.push(`/weather-result/${cityName.trim()}`);
   };
 
-  console.log(cityName);
-
   return (
     <div className={pageParam}>
       <form onSubmit={citySearch} className="flex flex-col w-full relative">
