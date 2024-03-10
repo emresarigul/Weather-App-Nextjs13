@@ -12,8 +12,8 @@ export default function WeatherResult({ data, photoData }) {
     "Saturday",
   ];
   return (
-    <div className="min-h-screen flex items-center mx-7 absolute top-10 sm:top-0 right-0 left-0">
-      <div className="relative text-white w-full md:w-3/4 lg:w-[1000px] h-[550px] sm:h-[600px] mx-auto top-8">
+    <div className="min-h-screen flex items-center mx-7 absolute top-10 sm:top-0 right-0 left-0 overflow-auto">
+      <div className="relative text-white w-full md:w-3/4 lg:w-[1000px] h-[550px] sm:h-[600px] mx-auto md:top-8">
         <div className="flex flex-col lg:flex-row w-full justify-between relative z-10 backdrop-blur-[3px] bg-black/20 rounded-t-md">
           <div className="flex items-center justify-between px-5 lg:px-0 lg:mx-5 w-full pt-5 lg:pt-0 mb-5 lg:mb-0">
             <div className="flex space-x-6 lg:space-x-10 items-center">
