@@ -19,7 +19,7 @@ export default function Error({ error }) {
         </h2>
         <Link
           className="text-white text-sm md:text-base lg:text-lg hover:underline"
-          href={"/"}
+          href="/"
         >
           Click here to return to the home page
         </Link>
